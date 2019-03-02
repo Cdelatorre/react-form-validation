@@ -50,7 +50,7 @@ export default class Form extends Component {
             <i class="fas fa-check"></i>
           </span>
         </div>
-        { 
+        { this.state.touch && this.state.errors.email && /* si no esta ya en el array */
           <p class="help is-success">This username is available</p>
         }
         { this.state.touch && !this.state.errors.email &&

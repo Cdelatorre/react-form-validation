@@ -8,7 +8,7 @@ Use controlled components to implement a form (with validations) to add new "ema
 
 <!-- 3. Add touch state to Form component. handle the onBlur event to set it. -->
 
-4. display errors/success messages, colors and icons based on the touch and error states.
+<!-- 4. display errors/success messages, colors and icons based on the touch and error states. -->
 
 5. handle the onSubmit event to add a new user (check props.addEmail). Don't forget the e.preventDefault().
 
