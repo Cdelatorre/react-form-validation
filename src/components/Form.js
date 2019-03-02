@@ -14,6 +14,16 @@ export default class Form extends Component {
     }
   }
 
+  handleFormSubmit = (event) => {
+    if(this.state.touch && this.state.errors.email){
+    event.preventDefault();
+    this.props.addUser(this.state.email);   
+    this.setState({
+      email : ''
+    })  
+   }
+  }
+
   onBlurChange = (e) => {
     this.setState({
       touch : true
@@ -33,6 +43,7 @@ export default class Form extends Component {
   }
 
   render = () => (
+    <form onSubmit={this.handleFormSubmit}>
     <div className="Form">
       <div class="field">
         <label class="label">Username</label>
@@ -63,5 +74,6 @@ export default class Form extends Component {
         <button class="button is-link">Submit</button>
       </div>
     </div>
+    </form>
   );
 }

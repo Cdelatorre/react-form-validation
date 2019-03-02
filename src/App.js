@@ -9,18 +9,20 @@ class App extends Component {
     emails: []
   }
 
-  addEmail = (email) => this.setState({ emails: [...this.state.emails, email] })
+  addEmail = (email) => {
+    console.log(email)
+    this.setState({ emails: [...this.state.emails, email] })
+  }
 
   render() {
     return (
       <div className="App">
         <NavBar/>
-
         <section className="section">
           <div className="container">
             <div className="columns">
               <div className="column">
-                <Form onSubmit={this.addEmail}/>
+                <Form addUser={this.addEmail}/>
               </div>
               <div className="column">
                 <List emails={this.state.emails}/>
