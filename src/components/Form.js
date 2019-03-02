@@ -7,10 +7,17 @@ export default class Form extends Component {
 
     this.state = {
       email : '', 
+      touch : false,
       errors : {
         email : false
       }
     }
+  }
+
+  onBlurChange = (e) => {
+    this.setState({
+      touch : true
+    })
   }
 
   onChange = (e) => {
@@ -33,6 +40,7 @@ export default class Form extends Component {
           <input class="input is-success" type="text" placeholder="Text input" 
           value={this.state.email} 
           onChange={this.onChange}
+          onBlur={this.onBlurChange}
           />
           <span class="icon is-small is-left">
             <i class="fas fa-user"></i>
@@ -45,7 +53,7 @@ export default class Form extends Component {
         { 
           <p class="help is-success">This username is available</p>
         }
-        { !this.state.errors.email &&
+        { this.state.touch && !this.state.errors.email &&
            <p class="help is-danger">This email is invalid</p>
         }
        

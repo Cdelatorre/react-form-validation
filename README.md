@@ -6,7 +6,7 @@ Use controlled components to implement a form (with validations) to add new "ema
 
 <!-- 2. Add error state to the Form component, validate the input value in the onChange handler and set the error value. -->
 
-3. Add touch state to Form component. handle the onBlur event to set it.
+<!-- 3. Add touch state to Form component. handle the onBlur event to set it. -->
 
 4. display errors/success messages, colors and icons based on the touch and error states.
 
